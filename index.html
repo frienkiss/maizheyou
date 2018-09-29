@@ -136,9 +136,9 @@ p{margin:6px}
 
 <div id="product" class="containers">
 	<h2>麦折优是什么？</h2>
-	<div style="width:400px;height:1px;margin:0 auto;background:#fc912b;margin-bottom:40px;">
+	<div style="width:400px;height:1px;margin:0 auto;background:#fc912b;margin-bottom:40px;margin-right:40%">
 	</div>
-	<p>
+	<p style="color:black">
 		麦折优-是河南松杉网络科技有限公司旗下的一款移动互联网产品，是一款都市人首选的高品质生活消费APP，
 		我们致力于打造一站式全方位的消费商城，平台覆盖美食、娱乐、美业和汽车等各类精品生活服务，
 		为你带来更多超值的优惠的同时给到您尊贵的产品和体验。
@@ -250,17 +250,17 @@ fadeEffect: {
 $(window).scroll(function(event){
 
 console.log($(window).scrollTop())
-if($(window).scrollTop()<660){
+if($(window).scrollTop()<640){
 	$(".nav").removeClass("nav-ac")
 	$(".active").removeClass("active")
 	$($("ul li span")[0]).attr("class","active")
 }
-if($(window).scrollTop()>660){
+if($(window).scrollTop()>640){
 	$(".nav").addClass("nav-ac")
 	$(".active").removeClass("active")
 	$($("ul li span")[1]).attr("class","active")
 }
-if($(window).scrollTop()>2000){
+if($(window).scrollTop()>1800){
 
 	$(".active").removeClass("active")
 	$($("ul li span")[2]).attr("class","active")
