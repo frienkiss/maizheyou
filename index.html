@@ -178,7 +178,7 @@ p{margin:6px}
 			<div class="col-md-6 col-md-pull-6">
 				<div class="fh5co-img">
 					<figure class="fh5co-figure animate-box">
-						<img class="img-2" src="./images/index.PNG" alt="Free Website Template by FreeHTML5.co">
+						<img class="img-2" src="./images/index.png" alt="Free Website Template by FreeHTML5.co">
 					</figure>
 				</div>
 			</div>
@@ -257,7 +257,7 @@ fadeEffect: {
 		$("ul li").on("click",function(){
 			$(".active").removeClass();
 			$($(this).find("span")[0]).attr("class","active")
-			console.log($(this))
+
 if($(this).attr("data-index")==1){
 	$("html, body").animate({
 			scrollTop: $("#product").offset().top }, {duration: 500,easing: "swing"});
@@ -290,7 +290,7 @@ if($(this).attr("data-index")==2){
 	$('#shoplist').html(html)
 $(window).scroll(function(event){
 
-console.log($(window).scrollTop())
+
 if($(window).scrollTop()<640){
 	$(".nav").removeClass("nav-ac")
 	$(".active").removeClass("active")
