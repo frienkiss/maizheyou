@@ -2,8 +2,8 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<meta name="description" content="麦折优小程序，用于优惠买单">
-	 <meta name="keywords" content="麦折优，小程序，郑州美食，推荐，优惠买单，折扣，麦折，松杉">
+<meta name="description" content="麦折优小程序，优惠买单,您身边的品质生活专家">
+	 <meta name="keywords" content="麦折优，小程序，郑州美食推荐，优惠买单，折扣，麦折，松杉">
 	 <meta name="baidu-site-verification" content="n27LeSQQDz" />
 <title>麦折优</title>
 <link rel="shortcut icon" href="./images/icon.ico" />
@@ -92,6 +92,9 @@ p{margin:6px}
 #main{margin-top:2rem}
 .fh5co-feature .fh5co-copy > .fh5co-copy-inner h2:before{background: #ff6065}
 .fh5co-copy-inner{font-size: 15px;}
+#shoplist{width:60%;margin:0 auto;padding: 40px;text-align: center;font-size:20px;color:black}
+.item{float:left;margin-right: 40px;}
+.item img{width:150px;height:150px;}
 </style>
 </head>
 <body>
@@ -101,8 +104,8 @@ p{margin:6px}
 	<img src="./images/name.png" />
 		<ul>
 			<li ><span class="active">首页	</span>	</li>
-			<li><span><a href="#product">产品</a></span> </li>
-			<li><span>商户入驻</span></li>
+			<li data-index = "1"><span><a href="#product">产品</a></span> </li>
+			<li data-index = "2"><span><a href ="#shoplist">商户入驻</a></span></li>
 		</ul>
 	</div>
 
@@ -175,7 +178,7 @@ p{margin:6px}
 			<div class="col-md-6 col-md-pull-6">
 				<div class="fh5co-img">
 					<figure class="fh5co-figure animate-box">
-						<img class="img-2" src="./images/index.png" alt="Free Website Template by FreeHTML5.co">
+						<img class="img-2" src="./images/index.PNG" alt="Free Website Template by FreeHTML5.co">
 					</figure>
 				</div>
 			</div>
@@ -204,6 +207,12 @@ p{margin:6px}
 
 
 	</div>
+</div>
+<h4 style="text-align:center;font-size:24px">
+	商户入驻
+</h4>
+<div id="shoplist">
+
 </div>
 <div  class="footer">
 	<img src="./images/program.jpg"  style="width:150px;"/>
@@ -248,12 +257,37 @@ fadeEffect: {
 		$("ul li").on("click",function(){
 			$(".active").removeClass();
 			$($(this).find("span")[0]).attr("class","active")
-
+			console.log($(this))
+if($(this).attr("data-index")==1){
 	$("html, body").animate({
 			scrollTop: $("#product").offset().top }, {duration: 500,easing: "swing"});
+}
+if($(this).attr("data-index")==2){
+	$("html, body").animate({
+			scrollTop: $("#shoplist").offset().top-200 }, {duration: 500,easing: "swing"});
+}
+
 			return false;
 
 		});
+		var shoplist = [{
+			name:"最烧烤",
+			pic:"http://maizheyou.oss-cn-qingdao.aliyuncs.com/mzy165fb9bc0191.png"
+		},
+	{
+		name:"潮汕豆捞",
+		pic:'http://maizheyou.oss-cn-qingdao.aliyuncs.com/mzy166ce2117cc1.jpg'
+	},{
+		name:"宇昊信仰饭店",
+		pic:"http://maizheyou.oss-cn-qingdao.aliyuncs.com/mzy166e7d5abc61.png"
+	}];
+	var html = ""
+	for(let i = 0;i<shoplist.length;i++){
+		var item ="<div class='item'><img src ='"+shoplist[i].pic+"'/><p>	"+shoplist[i].name+"</p></div>"
+		html+=item;
+	}
+	html+="<div style='clear:both'>	</div>"
+	$('#shoplist').html(html)
 $(window).scroll(function(event){
 
 console.log($(window).scrollTop())

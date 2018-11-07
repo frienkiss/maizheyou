@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="麦折优小程序，用于优惠买单">
+	 <meta name="keywords" content="麦折优，小程序，郑州美食，推荐，优惠买单，折扣，麦折，松杉">
+	 <meta name="baidu-site-verification" content="n27LeSQQDz" />
+<title>麦折优</title>
+<link rel="shortcut icon" href="./images/icon.ico" />
+<!-- Animate.css -->
+<link rel="stylesheet" href="css/animate.css">
+<!-- Icomoon Icon Fonts-->
+<link rel="stylesheet" href="css/icomoon.css">
+<!-- Bootstrap  -->
+<link rel="stylesheet" href="css/bootstrap.css">
+<!-- Theme style  -->
+<link rel="stylesheet" href="css/style.css">
+
+<!-- Owl Carousel  -->
+<link rel="stylesheet" href="css/owl.carousel.min.css">
+<link rel="stylesheet" href="css/owl.theme.default.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/css/swiper.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/js/swiper.js"></script>
+<style>
+body,ul,h3{font-size:10px;margin:0;padding:0;font-family: "Arial"}
+
+
+.footer{background: #fafafa;width: 100%;text-align: center;padding-top:35px}
+.footer p{letter-spacing: 1px}
+a{text-decoration:none;}
+a,a:hover,a:active,a:link,a:visited{text-decoration: none}
+.img{width:150px;height:150px;border-radius: 75px;float:left;}
+.webtest_history_list_text{float:left;margin-left:32px}
+li{width:60%;margin: 0 auto;list-style-type: none;margin-top:60px}
+li p{color:black;font-size:14px;margin-bottom:4px}
+#app{margin-bottom:300px;}
+</style>
+  <script src="https://cdn.bootcss.com/vue/2.4.2/vue.min.js"></script>
+</head>
+<body>
+<div id = "app">
+  <section class='webtest_history'>
+      <ul>
+          <li v-for='item in list'>
+              <div class="webtest_history_list" >
+                  <span><img :src="item.src" class="img"  alt=""></span>
+
+                  <div class="webtest_history_list_text">
+                      <h4 >{{item.name}}</h4>
+                      <p style="font-size:18px;color:#999">{{item.motto}}</p>
+                      <p>负责内容：{{item.content}}</p>
+
+                  <p>研究方向：{{item.fang}}</p>
+                    <p>联系他: <a :href="item.connect">{{item.connect}}</a></p>
+                  </div>
+                  <div style="clear:both">
+
+                  </div>
+              </div>
+          </li>
+      </ul>
+  </section>
+</div>
+<div  class="footer">
+	<img src="./images/program.jpg"  style="width:150px;"/>
+	<p>
+		咨询热线 : 400-090-0245  地址 : 中国.郑州市汽配大世界21世纪小区
+	</p>
+	<p>
+		Copyright  ©  ©2017-2018  郑州松杉网络科技企业发展有限公司    豫ICP备18025110号-1
+	</p>
+</div>
+<script src="./js/jquery.min.js"></script>
+<script>
+  new Vue({
+    el:'#app',
+    data:{
+        list:[
+            {
+                src:'img/dudu.jpg',
+                name:'后台——嘟嘟',
+                motto:'知名博主',
+                content:'集帅气和天才于一身的全栈大佬,精通go,java,js等等',
+                connect:"https://github.com/frienkiss"
+            },
+            {
+                src:'img/yaya.jpg',
+                name:'前端——傻丫',
+                 motto:'',
+                content:'一个超阔爱的小美女,精通vue,爱吃爱玩,爱撒娇',
+                connect:"https://github.com/frienkiss"
+            },
+            {
+                src:'images/bobo.jpg',
+                name:'前端——啵啵(啵小啵)',
+                 motto:'座右铭：今天我要用我的实力，来证明我的弱小。',
+                content:'负责麦折优、松杉官网的前端开发工作，拥有丰富的web开发经验。活跃的开源项目贡献者',
+                fang:'大数据可视化，用户体验',
+
+                connect:"https://github.com/frienkiss"
+            }
+          ]
+    }
+  })
+</script>
+</body>
+</html>
