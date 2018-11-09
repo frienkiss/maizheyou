@@ -225,7 +225,7 @@ p{margin:6px}
 <div  class="footer" style="font-size:1rem">
 	<img src="./images/program.jpg"  style="width:15rem;"/>
 	<p>
-		咨询热线 : 400-090-0245  地址 : 中国.郑州市汽配大世界21世纪小区
+		咨询热线 : 13103868632  地址 : 河南.郑州市花园路中州大道21世纪社区
 	</p>
 	<p>
 		Copyright  ©  ©2017-2018  河南松杉网络科技有限公司    豫ICP备18025110号-1
@@ -252,20 +252,15 @@ p{margin:6px}
     	el: '.swiper-pagination',
     	type: 'bullets',
 			clickable :true
-    //type: 'fraction',
-    //type : 'progressbar',
-    //type : 'custom',
   },
 	effect : 'fade',
 fadeEffect: {
 	crossFade: true,
-}
-		})
-
+	}
+})
 		$("ul li").on("click",function(){
 			$(".active").removeClass();
 			$($(this).find("span")[0]).attr("class","active")
-
 if($(this).attr("data-index")==1){
 	$("html, body").animate({
 			scrollTop: $("#product").offset().top }, {duration: 500,easing: "swing"});
@@ -310,14 +305,11 @@ if($(window).scrollTop()>640){
 	$($("ul li span")[1]).attr("class","active")
 }
 if($(window).scrollTop()>1800){
-
 	$(".active").removeClass("active")
 	$($("ul li span")[2]).attr("class","active")
 }
  });
 	})
-
 	</script>
-
 </body>
 </html>
