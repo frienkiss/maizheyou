@@ -19,10 +19,20 @@
 <!-- Owl Carousel  -->
 <link rel="stylesheet" href="css/owl.carousel.min.css">
 <link rel="stylesheet" href="css/owl.theme.default.min.css">
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/css/swiper.min.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/js/swiper.js"></script>
+
 <style>
-body,ul,h3{font-size:10px;margin:0;padding:0;font-family: "Arial"}
+@font-face {
+	font-family: 'siyuan';
+
+	src: url('./font/思源黑体.eot');
+	 src:url('./font/思源黑体.woff') format('woff'),
+			 url('./font/思源黑体.ttf') format('truetype'),
+			 url('./font/思源黑体.svg') format('svg');
+}
+body,ul,h3{font-size:10px;margin:0;padding:0;font-family: "siyuan"}
 
 .top{width: 100%;height:65rem;margin-top:5rem;}
 .swiper-slide{width:100%;height:100%}
@@ -34,10 +44,10 @@ body,ul,h3{font-size:10px;margin:0;padding:0;font-family: "Arial"}
 
 	color:white;z-index: 9;padding-top:2.4rem;top:0}
 	.nav-ac{background: linear-gradient(to right,#ff6065,#eea765);}
-.nav img{margin:0;width:12rem;float:left;font-size:2rem;margin-left: 4rem}
-ul{width:15%;margin:0;margin-left:60%}
+
+ul{width:15%;margin:0;margin-left: 12%}
 ul, ul li{float:left;list-style-type:  none}
-ul li{margin-right:3%;width:30%;font-size:1.4rem;font-family: fantasy;}
+ul li{margin-right:3%;width:30%;font-size:1.4rem;font-family: 'siyuan';}
 .swiper-container{position: absolute;top:0;width:100%;z-index: -1;height: 64rem}
 .circle,.circle2,.circle3{border: 1px solid white;width:40rem;height:40rem;border-radius: 20rem;position: absolute;top:0}
 .circle2{left:12px;top:8px}
@@ -80,9 +90,9 @@ ul li:hover,.more:hover{cursor: pointer;}
 .footer p{letter-spacing: 1px}
 a{text-decoration:none;}
 a,a:hover,a:active,a:link,a:visited{color:white;text-decoration: none}
-.swiper-container-horizontal>.swiper-pagination-bullets{
+/* .swiper-container-horizontal>.swiper-pagination-bullets{
 	bottom:6.5rem;
-}
+} */
 .swiper-pagination-bullet{width:5rem;height:1px;background:white;opacity: 1}
 .swiper-pagination-bullet-active{background: black}
 .iconmy{width:2.5rem;height:4.2rem;border-radius: 1.2rem;border:1px solid white;position:absolute;bottom:1.2rem
@@ -91,6 +101,15 @@ a,a:hover,a:active,a:link,a:visited{color:white;text-decoration: none}
 .fh5co-feature{height: 73rem;margin-bottom: 2rem}
 p{margin:6px}
 #main{margin-top:2rem}
+.text-con{position: absolute;top:36%;left:24%;color:white;letter-spacing: 0.4rem}
+.text-con h1,.text-con  h2{color:white}
+.text-con p{font-size: 2rem;margin: 0;letter-spacing: 0.3rem}
+ .pics{position: absolute;bottom:-1.4rem;right:20%;width:31rem}
+
+
+
+
+
 .fh5co-feature .fh5co-copy > .fh5co-copy-inner h2:before{background: #ff6065}
 .fh5co-copy-inner{font-size: 1.5rem;}
 #shoplist{width:70%;margin:0 auto;padding: 4rem;text-align: center;font-size:2rem;color:black}
@@ -103,43 +122,93 @@ p{margin:6px}
 #shoplist{width:90%;}
 .containers p{width:94%}
 }
+.point{animation: flow 2s 1;font-size: 5.3rem;margin-left: 1.4rem;margin-right: 1.4rem;position: relative;top:-0.8rem}
+	@keyframes flow {
+		from{opacity: 0.2;position: relative;top:1.8rem;}
+		to{opacity: 1;position: relative;top:-0.8rem}
+	}
+	.eng{color:white;position: absolute;top:16%;left:14%;font-size:2rem;letter-spacing: 0.3rem;opacity: 0.9}
+ .swiper-pagination-bullet{width:3.6rem;height:1.5rem;border-radius: 1.5rem;opacity: 0.7;position: relative;}
+ .swiper-pagination-bullet-active{width:1.5rem;border-radius: 0.75rem;background: white;opacity: 1}
 </style>
 </head>
 <body>
 	<div class="top">
 	<div class="nav">
 
-	<img src="./images/name.png" />
+	<h2 style="font-family:'siyuan';width:40%;float:left;color:white;margin-left:17%">麦折优</h2>
 		<ul>
 			<li ><span class="active">首页	</span>	</li>
-			<li data-index = "1"><span><a href="#product">产品</a></span> </li>
-			<li data-index = "2"><span><a href ="#shoplist">商户入驻</a></span></li>
+				<li data-index = "2"><span><a href ="#shoplist">商户入驻   </a></span></li>
+			<li data-index = "1"><span><a href="#product">联系我们</a></span> </li>
+
 		</ul>
 	</div>
 
-		<img src="./images/mai.png"  style="width:1000px;position:absolute;top:-27px;left:-133px"/>
+
 	<div class="swiper-container">
 	  <div class="swiper-wrapper">
-	    <div class="swiper-slide slide1"></div>
-			<div class="swiper-slide slide2"><img  src="./images/banner2.png"/></div>
-			<div class="swiper-slide slide1"></div>
+
+	    <div class="swiper-slide slide1"><img  src="./images/first.png"/>
+								<img class="pics" src="./images/firsts.png" />
+								<p class="eng">
+									INTRODUCT OF THE PROGRAM
+								</p>
+				<div class="text-con">
+					<h1 style="font-size:11rem;margin-bottom:2rem;font-family:'黑体'">麦折优</h1>
+					<h2 style="font-size:4.8rem;font-weight:300;margin-bottom:1rem">您身边的品质生活专家</h2>
+					<p>
+						连接商户与消费者的本地生活服务O2O平台
+					</p>
+				</div>
+			</div>
+			<div class="swiper-slide slide2"><img  src="./images/sec.png"/>
+				<img class="pics" src="./images/secs.png" />
+				<p class="eng">
+					INTRODUCT OF THE PROGRAM
+				</p>
+				<div class="text-con" style="text-align:right">
+	<h1 style="font-size:6rem;margin-bottom:.4rem;font-family:'黑体';text-align:right;opacity:0.5"><i class="fa fa-quote-left" aria-hidden="true"></i></h1>
+					<h2 style="font-size:5rem;margin-bottom:1rem">坚持<span class="point">商户</span>第一原则</h2>
+					<p>
+						运用内容服务、精准营销、数据决策、金融服务等手段
+					</p>
+					<p>
+						帮助商户降低成本，增加效率
+					</p>
+				</div></div>
+				<div class="swiper-slide slide3"><img  src="./images/three.png"/>
+								<img style="position: absolute;bottom:14rem;right:20%;width:40rem" src="./images/threes.png" />
+						<p class="eng">
+							INTRODUCT OF THE PROGRAM
+						</p>
+					<div class="text-con"style="text-align:right">
+		<h1 style="font-size:6rem;margin-bottom:.4rem;font-family:'黑体';text-align:right;opacity:0.5"><i class="fa fa-quote-left" aria-hidden="true"></i></h1>
+						<h2 style="font-size:5rem;margin-bottom:1rem">把握<span class="point">用户</span>消费需求</h2>
+						<p>
+							为用户精心挑选名品类优质商户，打造全方位商圈
+						</p>
+						<p>
+							实现线上互动，线下体验
+						</p>
+					</div></div>
 	  </div>
 		<div class="swiper-pagination">
 
 		</div>
-		<div class="iconmy">
+		<!-- <div class="iconmy">
 			<div>
 
 			</div>
-		</div>
+		</div> -->
 	</div>
-<div class="circles">
+<!-- <div class="circles">
 	<div class="circle">
 	</div>
 	<div class="circle2"></div>
 		<div class="circle3"></div>
-</div>
-<div class="text">
+</div> -->
+<!-- <div class="text">
 		<h4 style="text-align:center">麦折优小程序<br />不止于颜值</h4>
 		<p style="margin-top:8.2rem">
 			品质生活，首选专家
@@ -147,7 +216,7 @@ p{margin:6px}
 		<p style="font-size:2rem;margin-top:0.5rem">
 			我们想做些改变
 		</p>
-</div>
+</div> -->
 
 </div>
 
